@@ -1,0 +1,261 @@
+
+/* 
+    
+    Author     : XpeedStudio
+    Color      : REd
+    Color Code : #ff0000
+*/
+
+
+
+.colorstext {
+    color: #ff0000;
+}
+
+.colorsbg{
+    background: #ff0000 ! important;
+}
+.navigation nav ul li .sub-nav li a:hover {
+    color: #ff0000; //need to be add in color css
+}
+
+
+#carousel-slider .carousel-control i:hover{
+    background: #ff0000;
+}
+
+.separator{
+    background: #ff0000;
+}
+
+.separator-left{
+    background: #ff0000;
+}
+
+.separator-min-height {
+    background: #ff0000;
+}
+
+.btn-primary {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+.btn-primary:hover{
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn-default:hover {
+    color: #ff0000;
+    background-color: #FFFFFF;
+}
+
+.nav-light.custom-nav .navbar-nav>.active>a, 
+.nav-light.custom-nav .navbar-nav>.active>a:hover, 
+.nav-light.custom-nav .navbar-nav>.active>a:focus{
+    color:#ff0000;
+}
+
+.nav-light.scroll-nav  .navbar-nav>li>a:hover, 
+.nav-light.scroll-nav  .navbar-nav>li>a:focus,
+.nav-light.custom-nav .navbar-nav>li>a:hover, 
+.nav-light.custom-nav .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+
+.nav-light.scroll-nav .navbar-nav>.active>a, 
+.nav-light.scroll-nav .navbar-nav>.active>a:hover, 
+.nav-light.scroll-nav .navbar-nav>.active>a:focus{
+    color:#ff0000;
+}
+
+.nav-dark.custom-nav .navbar-nav>.active>a, 
+.nav-dark.custom-nav .navbar-nav>.active>a:hover, 
+.nav-dark.custom-nav .navbar-nav>.active>a:focus,
+.nav-dark.scroll-nav .navbar-nav>.active>a, 
+.nav-dark.scroll-nav .navbar-nav>.active>a:hover, 
+.nav-light.scroll-nav .navbar-nav>.active>a:focus{
+    color:#ff0000;
+}
+.nav-dark.custom-nav .navbar-nav>li>a:hover, 
+.nav-dark.custom-nav .navbar-nav>li>a:focus,
+.nav-dark.scroll-nav  .navbar-nav>li>a:hover, 
+.nav-dark.scroll-nav  .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+
+.hide-nav-light.navbar .navbar-nav>.active>a, 
+.hide-nav-light.navbar .navbar-nav>.active>a:hover, 
+.hide-nav-light.navbar .navbar-nav>.active>a:focus,
+.hide-nav-light.navbar .navbar-nav>li>a:hover, 
+.hide-nav-light.navbar  .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+
+.hide-nav-dark.navbar .navbar-nav>.active>a, 
+.hide-nav-dark.navbar .navbar-nav>.active>a:hover, 
+.hide-nav-dark.navbar .navbar-nav>.active>a:focus,
+.hide-nav-dark.navbar .navbar-nav>li>a:hover, 
+.hide-nav-dark.navbar  .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+.fixed-nav.navbar .navbar-nav>.active>a, 
+.fixed-nav.navbar .navbar-nav>.active>a:hover, 
+.fixed-nav.navbar .navbar-nav>.active>a:focus,
+.fixed-nav.navbar .navbar-nav>li>a:hover, 
+.fixed-nav.navbar  .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+
+.fixed-nav-dark.navbar .navbar-nav>.active>a, 
+.fixed-nav-dark.navbar .navbar-nav>.active>a:hover, 
+.fixed-nav-dark.navbar .navbar-nav>.active>a:focus,
+.fixed-nav-dark.navbar .navbar-nav>li>a:hover, 
+.fixed-nav-dark.navbar  .navbar-nav>li>a:focus{
+    color:#ff0000;
+}
+
+.download-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #ff0000 !important;
+}
+
+
+.home-intro-half-try  p i{
+    background: #ff0000;
+
+}
+.home-social  .list-inline a:hover{
+    color: #ff0000;
+
+}
+.home-intro-2nd-half-try .try-registration-form input{
+    border-left: 3px solid #ff0000;
+}
+.home-intro-2nd-half-try .try-registration-form input:focus{
+    border:1px solid  #ff0000;
+    border-left: 3px solid #ff0000;
+}
+.home-intro-2nd-half-try .try-registration-form textarea{
+    border-left: 3px solid #ff0000;
+}
+
+.home-intro-2nd-half-try .try-registration-form textarea:focus{
+    border:1px solid  #ff0000;
+    border-left: 3px solid #ff0000;
+}
+
+.service span i {
+    color: #ff0000;
+}
+.service:hover span {
+    background: #ff0000;
+}
+
+.feature i{
+    color: #ff0000;   
+}
+
+.feature-icon i{
+    color: #ff0000;
+}
+
+.feature-icon2 i{
+    background: #ff0000;
+}
+.feature-item:hover .feature-icon2 i{
+    color: #ff0000;
+    border: 2px solid #ff0000;
+
+}
+.features .feature-items .icon-container i{
+
+    background: #ff0000;
+    box-shadow: 0 0 0 3px #ff0000;
+}
+.features .feature-items:hover .icon-container i{
+    border: 1px solid #ff0000;
+    background: #ff0000;
+}
+
+.event-info i{
+    color: #ff0000;
+}
+
+.event-info-2 i{
+    color: #ff0000;
+
+}
+
+.events-schedule .event-title{
+    color: #ff0000;
+}
+
+.buy-form .form-control {
+    border-left: 3px solid #ff0000;
+
+}
+
+.panel-default>.panel-heading {
+    background: #ff0000;
+
+}
+.describe-panel .panel-default>.panel-heading .indicator {
+    color: #ff0000;
+}
+
+.describe-list li i {
+    color: #ff0000;
+}
+
+.faqs2.faqs .panel .panel-heading {
+    background: #ff0000;
+}
+
+.subscribe-form3 i {
+    color: #ff0000;
+}
+
+.subscribe-form2{
+    background: #ff0000 ! important;
+}
+
+.price-1 .plan {
+    border: 1px solid #ff0000;
+}
+
+.price-1 .plan .title {
+    color: #ff0000;
+}
+
+.price-1 .plan .description {
+    border-top: 1px solid #ff0000;
+}
+
+.price-2 .plan li.plan-name {
+    background: #ff0000;
+}
+.price-2  .plan li > strong {
+    color: #ff0000;
+
+}
+.pricing2 .top {
+    background: #ff0000;
+}
+
+.pricing2 .bottom ul li > span {
+    color: #ff0000;
+}
+.team-member h5 {
+    color: #ff0000;
+}
+
+.contact-4 i{
+    color: #ff0000;
+}
+
+.footer-1 a span:hover,
+.footer-1-light a span:hover {
+    color: #ff0000;
+}
+

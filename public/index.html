@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <title>California Auto Registration Tag Renewal | Auto-Reg.com</title>
+        <meta name="description" content="The fast, simple way to renew your California Auto Registration! ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:500,400,300' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/plugins.css" />
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+       
+        <!-- Color CSS -->
+        <link rel="stylesheet" href="css/colors/royal-blue.css">
+
+        <!--DARK CSS-->
+        <!--        <link rel="stylesheet" href="css/dark.css">-->
+
+
+        <link rel="stylesheet" href="css/responsive.css" />
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "dbc64f5d-caac-4d45-b770-b973012e17d6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+      <script type="text/javascript">
+      var dmv_response, renewal, fees, cvlf, cvlfp;
+      //function to populate fee table
+      function populateFees(fees){
+        $("#fee-table > tbody tr").remove();      
+        $.each(fees, function(index, value) {
+          var fee = value;
+          $("#fee-table > tbody").append("<tr><td>" + fee["code"] + "</td><td>" + fee['description'] + "</td><td>" + fee["amount"] + "</td></tr>");
+          //'text': "Date: " + time_tracker["day"] + " Hourly Rate: $" + rate.toFixed(2) + " " + time_tracker['currency'] + " - " + 
+        //  time_tracker['time_worked']+ " - Total: $" + total.toFixed(2) + " - Contact:" + contact_name
+        });
+      }
+
+      function cvlf(fees){
+      var str_cvlf = "0.00";
+      $.each(fees, function(index, value) {
+      var fee = value;
+        if(fee['code'] == "004"){
+          str_cvlf = fee['amount'];
+          console.log(str_cvlf);
+        }
+      });
+      
+      return str_cvlf;
+      
+    }
+    
+    function cvlfp(fees){
+      var str_cvlfp = "0.00";
+      $.each(fees, function(index, value) {
+        var fee = value;
+        if(fee['code'] == "504"){
+          str_cvlfp = fee['amount'];
+          console.log(str_cvlfp);
+        }
+      });
+      
+      return str_cvlfp;
+    }
+
+    function formatCurrency(strNumber){
+              var text = parseFloat(strNumber);
+              var retval = text.toFixed(2);
+              return retval;
+      
+            }
+    
+    //fucntions to parse errors
+    function error_description(error_code){
+      if (error_code == "CADMV/F180"){
+        retval = "It is an insurance error";
+      }
+      else if (error_code == "CADMV/D108"){
+        retval = "It is smog error";
+      }
+      else if (error_code == "CADMV/Q045"){
+        retval = "A transaction has been performed on vehicle within the past 72 hours.  Must wait for initial transaction to clear before processing again.";
+      }
+      else if (error_code == "CADMV/D085"){
+        retval = "DMV cannot generate the appropriate zip and/or county code.";
+      }
+      else if (error_code == "CADMV/Q023"){
+        retval = "The DMV system is down temporarily.  Please re-try this transaction in 10 to 15 minutes.  Thank you for your patience.";
+      }
+      else if (error_code == "CADMV/Q201"){
+        retval = "The vehicle registration has been suspended by the DMV.  You will need to contact the DMV to release the suspension.";
+      } 
+      else {
+        retval = dmv_response.error_message
+      }
+      return retval;
+    }
+    
+    </script>
+
+    </head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+               <div class="loader">
+                    <div class="loaded">&nbsp;</div>
+                </div>
+
+
+        <!--        menu-->
+        <header>
+        <!-- <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> -->
+             <!-- if you want dark nav bar just replace 2 css bottom line (av-dark navbar-inverse) and add this (nav-dark navbar-inverse)-->
+            <nav class="navbar navbar-1 nav-light navbar-default navbar-fixed-top" id="main-navbar" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a href="index.html" class="navbar-brand top-logo"><img src="images/auto-logo.png" alt="logo" /></a>
+                    </div>  <!--end navbar-header -->
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#main">Home</a></li>
+                            <li><a href="#how">How it works</a></li>
+                          <li><a href="#about">About us</a></li>                                                  
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>  <!--end collapse -->
+                </div>  <!--end container -->
+            </nav>
+        </header>
+
+        <!-- if you like to use surface. change class="home" to class="surface"-->
+        <section id="main" class="canvas car1" >
+
+            <!-- <div id="surface"></div>-->
+            <!-- <canvas id="canvas"></canvas>-->
+
+
+            <!-- for canvas use class overlay to canvas-overlay-->
+            <!-- for surface use class overlay to surface-overlay-->
+
+            <div class="overlay">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="home-intro-half-try">
+                                <!--Header text -->
+                              <h1><strong>Register Your Car, Wherever You Are!</strong> </h1>
+                                <p><strong>The fast, simple way to renew your California Auto Registration!</strong></p>
+                                <ul class="describe-list ">
+                                 <li><i class="fa fa-clock-o "></i> <span class="white">Save Time</span> </li>
+                                <li><i class="fa fa-angellist "></i> <span class="white">Avoid Long DMV Lines</span> </li>
+                                 <li><i class="fa fa-credit-card "></i> <span class="white">Safe, Secure Credit Card Processing</span> </li>
+                                <li><i class="fa fa-file-text-o"></i> <span class="white">The First Mobile App <em>Approved</em> by the California DMV!</span> </li>
+                                </ul>
+                                
+                            </div>
+                             <div class="col-md-12 visible-md visible-sm visible-lg home-social ">
+                                    <ul class="list-inline text-center">
+                                        <li><a href="http://facebook.com/4autoreg"><i class=" fa fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/#!/auto_reg"><i class=" fa fa-twitter"></i></a></li>  
+                                        <li><span class='st_facebook_vcount' displayText='Facebook'></span></li>
+                                        <li><span class='st_twitter_vcount' displayText='Tweet'></span></li>
+
+                                         
+                                      <!--   <li><a href="#"><i class=" fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class=" fa fa-youtube"></i></a></li> -->
+                                    </ul>
+                                     
+                                </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="home-intro-2nd-half-try">
+                                <div class="try-registration-form center-block ">
+                                    <h3>Check your registration fees for free!</h3>
+                                     
+                                    <form class="try-form" id="new_renewal">
+                                                                   
+                                     <label class="control-label" for="renewal_plate_no"> California plate number</label>
+                                        <input class="form-control" id="renewal_plate_no" type="text" required autofocus name="renewal[plate_no]" placeholder="Your full California plate number">                                      
+                                         <label class="control-label" for="renewal_last_five_of_vin">Vehicle Identification Number </label>
+                                         <input class="form-control" pattern="[0-9]{3}" id="renewal_last_five_of_vin" type="text" required name="renewal[last_five_of_vin]" placeholder="Last 3 digits of your VIN**">
+                                         <p>**Vehicle Identification Number</p>
+                                        
+                                           <label class="control-label" for="renewal[non_resident_military]">Are you active duty military and not a resident of California?</label>
+                                       
+                                            <select class="center-block" id="renewal[non_resident_military]" name="renewal[non_resident_military]">
+                                            <option>Yes</option>
+                                            <option selected="False">No</option>
+                                            </select> 
+                                            <input class="hidden" id="renewal_state" name="renewal[state]" type="hidden" value="CA" />
+                          
+
+
+                                        <input id="home" name="home" type="hidden" value="true" />
+                                        <label class="control-label text-center" for="commit"></label>   
+                                        <button class="btn btn-primary btn-lg center-block" type="submit" id="check" name="submit" data-loading-text="Checking Details..." >Calculate My Fees!</button>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12  visible-xs home-social ">
+                                    <ul class="list-inline text-center">
+                                        <li><a href="http://facebook.com/4autoreg"><i class=" fa fa-facebook"></i></a></li>
+                                        <li><a href="https://twitter.com/#!/auto_reg"><i class=" fa fa-twitter"></i></a></li>                                       
+                                        <li><span class='st_facebook_vcount' displayText='Facebook'></span></li>
+                                        <li><span class='st_twitter_vcount' displayText='Tweet'></span></li>
+                                     
+                                    </ul>
+                                    
+                                </div>
+
+
+                       
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- modals -->
+    <div class="modal fade" id="modal-success">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Registration is Ready for Renwal!</h4>
+          </div>
+          <div class="modal-body">
+            <h3>Complete your registration for as litte as:<h3>
+            <h1>$149.34</h1>
+            <em>Renew now and avoid late fees and tickets.</em>
+            <p id="military_discount"><p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Not Yet</button>
+            <a id="renew_now" class="btn btn-success" href="" role="button">Renew Now!</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+	        <div class="modal fade" id="modal-error">
+	      <div class="modal-dialog">
+	        <div class="modal-content">
+	          <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	            <h4 class="modal-title"></h4>
+	          </div>
+	          <div class="modal-body">
+	            <p></p>
+	            <p id="hint"></p>
+	          </div>
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-default" data-dismiss="modal">Try Again</button>
+	          </div>
+	        </div><!-- /.modal-content -->
+	      </div><!-- /.modal-dialog -->
+	    </div>
+      <section>
+<div id="summary"></div>
+	<div class="container" id="error-response">
+    <h3>DMV Response Summary</h3>
+    <div class="table-responsive">
+      <table class="table" id="error-detail">
+      <thead>
+           <tr>
+            <th>Status</th>
+             <th>DMV Error Code</th>
+             <th>API Error Code</th>
+             <th>Message</th>
+           </tr>
+       </thead>
+       <tbody>
+          <tr>
+            <td id="response_status"></td>
+            <td id="response_error_code"></td>
+            <td id="response_api_error_code"></td>
+            <th id='response_message'></th>
+          </tr>
+       </tbody>
+      </table>
+    </div>
+      <div id="error-options">
+        <a id="more_info" class="btn btn-danger" href="" role="button">More Info</a>
+      </div>
+  </div>
+
+	  	<div class="container" id="fee-summary">
+	    <h3>You can renew your registration for as little as:</h3>
+	        <h1>$149.45</h1>
+	             <table class="table" id="totals">
+	        <thead>
+	             <tr>
+	               <th>Description</th>
+	               <th>Amount</th>
+	             </tr>
+	         </thead>
+	         <tbody>
+	            <tr>
+	              <td>DMV Fees</td><td id="dmv_total"></td>
+	            </tr>
+	            <tr class="nrm_discount">
+	              <td>Non-Resident Military Discount*</td><td id="cvlf"></td>
+	            </tr>
+	            <tr>
+	              <td>Service Fee</td><td id="service_fee"></td>
+	            </tr>
+	            <tr>
+	              <td>Total (Standard Shipping)</td><th id='total'></th>
+	            </tr>
+	         </tbody>
+	        </table>
+          <a id="renew_now_body" class="btn btn-success" href="" role="button">Renew Now!</a>
+	        <p class="nrm_discount">*The fee quoted includes a discount for Non-Resident Military status.  You will be required to complete and electronically sign a form confirming your military status.</p>
+	        <h3>Fee Summary</h3>
+	      <div class="table-responsive">
+	        <table class="table" id="fee-table">
+	         <thead>
+	             <tr>
+	               <th>Code</th>
+	               <th>Description</th>
+	               <th>Amount</th>
+	             </tr>
+	         </thead>
+	         <tbody>
+         
+	         </tbody>
+	        </table>
+	      </div>    
+</section>
+       
+
+
+
+
+        <!--SERVICE-->
+        <section id="how" class="sections">
+            <div class="container">
+            <h2 class="text-center">How does it work?</h2>
+                <div class="row ">
+                    <div class="col-sm-4 ">
+                        <div class="service text-center  wow fadeInLeft animated" data-wow-offset="120" data-wow-duration="1.5s">
+                            <span><i class="fa fa-check-circle-o"></i></span>
+                            <h4> Enter your registration details.</h4>
+                           
+                        </div>
+                    </div><!--end 4 col-->
+
+                    <div class="col-sm-4">
+
+                        <div class="service text-center  wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+                            <span><i class="fa fa-gear"></i></span>
+                            <h4>Our app calculates your fees.</h4>
+                            
+                        </div>
+                    </div><!--end 4 col-->
+
+                    <div class="col-sm-4">
+                        <div class="service text-center  wow fadeInRight animated" data-wow-offset="120" data-wow-duration="1.5s">
+                            <span><i class="fa fa-credit-card"></i></span>
+                            <h4>If your registration is due, pay your fees with a credit card.</h4>
+                           
+                    </div><!--end 4 col-->
+                    </div>
+
+                   <div class="row">  
+                   <div class="col-sm-6">
+                                           <div class="service text-center  wow fadeInRight animated" data-wow-offset="120" data-wow-duration="1.5s">
+                                               <span><i class="fa fa-envelope"></i></span>
+                                               <h4>We process and issue your registration and send you an e-copy via e-mail. You will also be emailed forms for e-signature that are required by the California DMV.</h4>
+                                               
+                                           </div>
+                                       </div><!--end 4 col-->
+                   
+                                        <div class="col-sm-6">
+                                           <div class="service text-center  wow fadeInRight animated" data-wow-offset="120" data-wow-duration="1.5s">
+                                               <span><i class="fa  fa-send"></i></span>
+                                               <h4>We send you your registration via your preferred method.</h4>
+                                               
+                                           </div>
+                                       </div><!--end 4 col-->
+                </div><!--end row-->
+                <h2 class="text-center text-info"><ins>Yes, it's that easy.</ins></h3>
+            </div>
+        </section>
+      
+        <section id="about" class="sections">
+            <div class="container">
+                <div class="row">
+                    <div class="details-full-width">
+
+
+                        <div class="col-sm-8 col-sm-offset-2 text-center">
+
+                            <!--  Heading-->
+                            <div class="heading black-text wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+                                <div class="title"><h2>About Auto-Reg.com</h2></div>
+                                <div class="subtitle"><h5>I bet you are asking yourself how can I process my registration through an app? Can I really avoid long lines at the DMV? Are the fees that I paid transmitted to the DMV?</h5></div>
+                            </div>
+                            <p class=" wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s">
+                                The answer is yes, yes, and yes! We are licensed and bonded by the California DMV to process instant auto registration renewals, and more. We have worked with the industry's leading IT company to provide Auto-Reg.com technology that will allow you to process your auto registration when you have time. Have you ever heard of someone having an awesome experience at the DMV? No, probably not the most common story is that people just don't have time to take off of work and stand in a line that is crazy. We are the solution. We do have a small service fee, but lets do the math, How much is your time worth? Is it worth you spending the whole day? That is for you to decide. We thank you for allowing us to help you on all of your auto registration needs.
+                            </p>
+
+                        </div>
+                         <div class="col-md-12 text-center">
+               <!--      <a href="#how" class="btn btn-primary btn-lg ">How it works <i class="fa fa-question fa-lg" data-selector="i.fa" style="outline: none; cursor: default;"></i></a>   -->                             
+                    <a href="#new_renewal" class="btn btn-primary btn-lg  extra-width">Check your fees now! it's FREE <i class="fa  fa-exchange fa-lg" data-selector="i.fa" style="outline: none; cursor: default;"></i></a>
+
+                    </div>
+                    </div>
+                </div>
+                  
+            </div>
+                   
+        </section>    
+
+
+
+  <!--subscription-->
+<!--         <section id="subscription" class="subscribe-form2">
+            <div class="container">
+                <div class="row">
+                    <form id="mailchimp" class="wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" role="form">
+                        <div class="col-sm-8">
+                            <h6 class="subscription-success"></h6>
+                            <h6 class="subscription-error"></h6>
+                            <input type="email" name="email" id="subscriber-email" placeholder="Enter Your Email">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary btn-lg" id="subscribe-button" type="submit">
+                               Join our mailing list
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+
+        </section> -->
+
+
+      
+
+
+        <!--contact form-->
+
+
+        <section id="contact" class="sections">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-4  text-center wow bounceInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
+                        <div class="col-sm-4">
+                            <i class="fa fa-lock"></i>
+                            <h4 class="slide-bottom">Privacy Policy</h4>
+
+                            <p class="slide-bottom">Auto-Reg.com keeps all your information private. We keep a record of your automobile registration details, and use your email address for communication with you regarding your renewal. We ask for your phone number solely to contact you with any questions that might arise regarding outstanding tickets, or smog check requirements. </p>
+                        </div><!-- end col -->
+
+                        <div class="col-sm-4">
+                            <i class="slide-bottom fa fa-credit-card"></i>
+                            <h4 class="slide-bottom">Credit Card Charges</h4>
+                            <p class="slide-bottom">All credit card purchases are securely processed by our payment gateway partner, Authorize.net</p>
+                            <!-- (c) 2005, 2013. Authorize.Net is a registered trademark of CyberSource Corporation --> <div class="col-sm-12 slide-bottom  text-center"> <script type="text/javascript" language="javascript">var ANS_customer_id="f6b2a200-12cd-4bf4-a0d1-fc1cc4294082";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script> <a href="http://www.authorize.net/" id="AuthorizeNetText" target="_blank"></a> </div>
+                        </div><!-- end col -->
+
+                        <div class="col-sm-4">
+                            <i class="slide-bottom fa fa-envelope"></i>
+                            <h4 class="slide-bottom">Contact Us</h4>
+                            <p class="slide-bottom"><strong>questions@auto-reg.com</strong><br /> Please email us at questions@auto-reg.com with any questions.</p>  
+                                                    
+                        </div><!-- end col -->
+                     
+                               
+                                                                                                       
+                                      
+                                    
+                                     
+                             
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <script src="js/jquery.parallax-1.1.3.js"></script>
+        <script src="js/jquery.localScroll.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/jquery.wow.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> -->
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.easypiechart.min.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <!--canvas file-->
+        <!--        surface1 for blue,  surface2 for red-->
+        <!--        <script src="js/canvas/surface.js"></script>
+                <script src="js/canvas/surface2.js"></script>-->
+
+
+
+        <!--        canvas1 for box effect,  canvas2 for particle, canvas3 for bubble -->
+        <!--        <script src="js/canvas/canvas2.js"></script>-->
+
+
+
+
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--        <script>
+                    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                    e.src='//www.google-analytics.com/analytics.js';
+                    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                    ga('create','UA-XXXXX-X');ga('send','pageview');
+                </script>-->
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
