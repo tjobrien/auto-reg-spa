@@ -155,27 +155,27 @@ $(document).ready(function () {
 
     }
 
-      $('#contact-form').submit(function(event){
-        console.log("hello-contact");
-        var url = "http://glorious-pup-38-214709.usw1.nitrousbox.com/contacts.json";
-        //var url = "https://ca-auto-reg.herokuapp.com/contacts.json"
-        $('#contact').button('loading');
-          var str = $("#contact-form").serializeArray();
-          console.log(str);
-          var submit_form = $.ajax({
-              url: url,
-              type: "post",
-              data: str,
-              dataType: 'json'
+      // $('#contact-form').submit(function(event){
+      //   console.log("hello-contact");
+      //   var url = "http://glorious-pup-38-214709.usw1.nitrousbox.com/contacts.json";
+      //   //var url = "https://ca-auto-reg.herokuapp.com/contacts.json"
+      //   $('#contact').button('loading');
+      //     var str = $("#contact-form").serializeArray();
+      //     console.log(str);
+      //     var submit_form = $.ajax({
+      //         url: url,
+      //         type: "post",
+      //         data: str,
+      //         dataType: 'json'
 
-          });
-          submit_form.done(function(jqXHR, textStatus){
-             alert("Thanks for your input!");
-             $("#contact").button('reset');
-          });
-          return false;
+      //     });
+      //     submit_form.done(function(jqXHR, textStatus){
+      //        alert("Thanks for your input!");
+      //        $("#contact").button('reset');
+      //     });
+      //     return false;
 
 
 
-      });
+      // });
 });

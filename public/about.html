@@ -81,28 +81,30 @@
 						</div>
 					</div>
 				</div>
-					<div class="row">
-						<div class="col-sm-4 col-sm-offset-2">
-							<div class="inputContainer">
-							<label>Name</label>
-								<input type="text" name="contactName" id="contactName" required value="" class="form-control" autocomplete="off" />
+				<div class="row">
+						<form id="contact-form" method="POST" action="/__/forms/contact">
+							<div class="col-sm-4 col-sm-offset-2">
+								<div class="inputContainer">
+								<label>Name</label>
+									<input type="text" name="name" id="contactName" required value="" class="form-control" autocomplete="off" />
+								</div>
 							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="inputContainer">
-							<label class="screen-reader-text">Email</label>
-								<input type="text" name="email" id="email" required value="" class="form-control" autocomplete="off"  />
+							<div class="col-sm-4">
+								<div class="inputContainer">
+								<label class="screen-reader-text">Email</label>
+									<input type="text" name="email" id="email" required value="" class="form-control" autocomplete="off"  />
+								</div>
 							</div>
-						</div>
-						<div class="col-sm-8 col-sm-offset-2">
-							<div class="inputContainer">
-							<label class="screen-reader-text">Message</label>
-								<textarea name="comments" id="commentsText" class="form-control" autocomplete="off"></textarea>
+							<div class="col-sm-8 col-sm-offset-2">
+								<div class="inputContainer">
+								<label class="screen-reader-text">Message</label>
+									<textarea name="message" id="commentsText" class="form-control" autocomplete="off"></textarea>
+								</div>
 							</div>
-						</div>
-						<div class="col-sm-8 col-sm-offset-2">
-							<button name="submit" type="button" class="btn btn-primary btn-lg">Send</button>
-						</div>
+							<div class="col-sm-8 col-sm-offset-2">
+								<button id="contact" type="submit" class="btn btn-primary btn-lg" data-loading-text="Sending Details...">Send</button>
+							</div>
+						</form>
 					</div>
 			</div>
 		</div>

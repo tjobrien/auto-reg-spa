@@ -462,23 +462,23 @@
 					</div>
 				</div>
 					<div class="row">
-						<form id="contact-form">
+						<form id="contact-form" method="POST" action="/__/forms/contact">
 							<div class="col-sm-4 col-sm-offset-2">
 								<div class="inputContainer">
 								<label>Name</label>
-									<input type="text" name="contact[name]" id="contactName" required value="" class="form-control" autocomplete="off" />
+									<input type="text" name="name" id="contactName" required value="" class="form-control" autocomplete="off" />
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="inputContainer">
 								<label class="screen-reader-text">Email</label>
-									<input type="text" name="contact[email]" id="email" required value="" class="form-control" autocomplete="off"  />
+									<input type="text" name="email" id="email" required value="" class="form-control" autocomplete="off"  />
 								</div>
 							</div>
 							<div class="col-sm-8 col-sm-offset-2">
 								<div class="inputContainer">
 								<label class="screen-reader-text">Message</label>
-									<textarea name="contact[message]" id="commentsText" class="form-control" autocomplete="off"></textarea>
+									<textarea name="message" id="commentsText" class="form-control" autocomplete="off"></textarea>
 								</div>
 							</div>
 							<div class="col-sm-8 col-sm-offset-2">

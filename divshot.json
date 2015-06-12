@@ -4,3 +4,18 @@
   "clean_urls": true,
   "error_page": "y"
 }
+
+{
+  "forms": {
+    "contact": {
+      "to": "tobrien@auto-reg.com",
+      "from": "contact@your-company.com",
+      "replyTo": "{{name}} <{{email}}>",
+      "subject": "Contact Received from {{name}}",
+      "html": "<b>Message:</b> {{message}}",
+      "text": "Message: {{message}}",
+      "success": "/contact-received",
+      "failure": "/contact-failure"
+    }
+  }
+}
