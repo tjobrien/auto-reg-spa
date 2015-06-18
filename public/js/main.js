@@ -155,6 +155,10 @@ $(document).ready(function () {
 
     }
 
+    setTimeout(function() {
+      $('#welcome').modal();
+      }, 2500);
+
       // $('#contact-form').submit(function(event){
       //   console.log("hello-contact");
       //   var url = "http://glorious-pup-38-214709.usw1.nitrousbox.com/contacts.json";
