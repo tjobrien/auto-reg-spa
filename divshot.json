@@ -2,17 +2,14 @@
   "name": "auto-reg",
   "root": "public",
   "clean_urls": true,
-  "error_page": "y"
-}
-
-{
+  "error_page": "y",
   "forms": {
     "contact": {
       "to": "tobrien@auto-reg.com",
-      "from": "contact@your-company.com",
+      "from": "{{email}}",
       "replyTo": "{{name}} <{{email}}>",
       "subject": "Contact Received from {{name}}",
-      "html": "<b>Message:</b> {{message}}",
+      "html": "<b>From:</b>{{email}}<b>Message:</b> {{message}}",
       "text": "Message: {{message}}",
       "success": "/contact-received",
       "failure": "/contact-failure"
