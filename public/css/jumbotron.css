@@ -19,7 +19,7 @@ p {
 }
 
 .jumbotron {
-	/*background: url(../img/FullSizeRender.jpg) no-repeat center center scroll;*/
+	background: url(../img/whereever-you-are.jpg) no-repeat center center scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
