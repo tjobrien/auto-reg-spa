@@ -31,7 +31,8 @@ $(document).ready(function () {
         $('#check').button('loading');
           var str = $("#new_renewal").serializeArray();
           var submit_form = $.ajax({
-              url: "https://ca-auto-reg.herokuapp.com/renewals/mobile_create.json",
+              //url: "https://ca-auto-reg.herokuapp.com/renewals/mobile_create.json",
+			  url: "http://localhost:3000/renewals/mobile_create.json",
               type: "post",
               data: str,
               dataType: 'json'
@@ -96,7 +97,7 @@ $(document).ready(function () {
             }
             var total = total_before_shipping + 0.49
 
-            $(".modal-body h1").html("Fees:  "  + "$" + total.toFixed(2));
+            $("#fee_total").html("$" + total.toFixed(2));
             $('#fee-summary h1').html("Fees:  " + "$" + total.toFixed(2));
             //All fees listed on in the div.
             $('#fee-summary').show();
@@ -106,7 +107,7 @@ $(document).ready(function () {
             $("#service_fee").html(service_fee);
             $("#total").html(total);
 
-            $("body").scrollTo("#totals");
+            //$("body").scrollTo("#totals");
             //this little bit of code to encode fees if needed
             // var strFees = JSON.stringify(fees);
             // var strEncode = jQuery.base64.encode(strFees);
