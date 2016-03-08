@@ -31,8 +31,8 @@ $(document).ready(function () {
         $('#check').button('loading');
           var str = $("#new_renewal").serializeArray();
           var submit_form = $.ajax({
-              //url: "https://ca-auto-reg.herokuapp.com/renewals/mobile_create.json",
-			  url: "http://localhost:3000/renewals/mobile_create.json",
+              url: "https://auto-reg-app.herokuapp.com/renewals/mobile_create.json",
+			  //url: "http://localhost:3000/renewals/mobile_create.json",
               type: "post",
               data: str,
               dataType: 'json'
@@ -53,7 +53,7 @@ $(document).ready(function () {
         $('#secondary_check').button('loading');
           var str = $("#secondary_renewal").serializeArray();
           var submit_form = $.ajax({
-              url: "https://ca-auto-reg.herokuapp.com/renewals/mobile_create.json",
+              url: "https://auto-reg-app.herokuapp.com/renewals/mobile_create.json",
               type: "post",
               data: str,
               dataType: 'json'
@@ -114,8 +114,8 @@ $(document).ready(function () {
             //$('body').scrollTo("#fee-summary", 800);
 
           //$("#renew_now").attr("href", "auto-reg-order.html?fees&" + strEncode);
-            $("#renew_now").attr("href", "https://ca-auto-reg.herokuapp.com/orders/new?response_id=" + dmv_response.id);
-            $("#renew_now_body").attr("href", "https://ca-auto-reg.herokuapp.com/orders/new?response_id=" + dmv_response.id);
+            $("#renew_now").attr("href", "https://auto-reg-app.herokuapp.com/orders/new?response_id=" + dmv_response.id);
+            $("#renew_now_body").attr("href", "https://auto-reg-app.herokuapp.com/orders/new?response_id=" + dmv_response.id);
 
             } else {
               console.log("DMV Fees are empty");
@@ -142,7 +142,7 @@ $(document).ready(function () {
           $("#error-response").show();
           $("error-options").html(error_description(dmv_response.error_code));
           //$("body").scrollTo("#summary");
-          $("#more_info").attr("href", "https://ca-auto-reg.herokuapp.com/orders/1/moreinfo?response_id=" + dmv_response.id);
+          $("#more_info").attr("href", "https://auto-reg-app.herokuapp.com/orders/1/moreinfo?response_id=" + dmv_response.id);
           }
 
       $("#check").button('reset');
